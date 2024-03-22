@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8A6527F2BADFD760086A068 /* FeedImageDataLoaderWithFallbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6527E2BADFD760086A068 /* FeedImageDataLoaderWithFallbackTests.swift */; };
+		B8A652872BAE09620086A068 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A652862BAE09620086A068 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		B8B8B5EF2BADD512006CB088 /* EssentialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B5EE2BADD512006CB088 /* EssentialAppTests.swift */; };
 		B8B8B5FC2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B5FB2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift */; };
 		B8D3F45C2B8A4C1300043027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3F45B2B8A4C1300043027 /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		B8A6527E2BADFD760086A068 /* FeedImageDataLoaderWithFallbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackTests.swift; sourceTree = "<group>"; };
+		B8A652862BAE09620086A068 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		B8B8B5EC2BADD512006CB088 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8B5EE2BADD512006CB088 /* EssentialAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppTests.swift; sourceTree = "<group>"; };
 		B8B8B5FB2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				B8D3F4662B8A4C1500043027 /* LaunchScreen.storyboard */,
 				B8D3F4692B8A4C1500043027 /* Info.plist */,
 				B8B8B5FB2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift */,
+				B8A652862BAE09620086A068 /* FeedImageDataLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				B8D3F45C2B8A4C1300043027 /* AppDelegate.swift in Sources */,
 				B8B8B5FC2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				B8D3F45E2B8A4C1300043027 /* SceneDelegate.swift in Sources */,
+				B8A652872BAE09620086A068 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
