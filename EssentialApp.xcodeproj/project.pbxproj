@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8B8B5EF2BADD512006CB088 /* EssentialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B5EE2BADD512006CB088 /* EssentialAppTests.swift */; };
+		B8B8B5FC2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B5FB2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift */; };
 		B8D3F45C2B8A4C1300043027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3F45B2B8A4C1300043027 /* AppDelegate.swift */; };
 		B8D3F45E2B8A4C1300043027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3F45D2B8A4C1300043027 /* SceneDelegate.swift */; };
 		B8D3F4602B8A4C1300043027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3F45F2B8A4C1300043027 /* ViewController.swift */; };
@@ -90,6 +91,7 @@
 /* Begin PBXFileReference section */
 		B8B8B5EC2BADD512006CB088 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8B5EE2BADD512006CB088 /* EssentialAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppTests.swift; sourceTree = "<group>"; };
+		B8B8B5FB2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		B8D3F4582B8A4C1300043027 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D3F45B2B8A4C1300043027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8D3F45D2B8A4C1300043027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				B8D3F4642B8A4C1500043027 /* Assets.xcassets */,
 				B8D3F4662B8A4C1500043027 /* LaunchScreen.storyboard */,
 				B8D3F4692B8A4C1500043027 /* Info.plist */,
+				B8B8B5FB2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			files = (
 				B8D3F4602B8A4C1300043027 /* ViewController.swift in Sources */,
 				B8D3F45C2B8A4C1300043027 /* AppDelegate.swift in Sources */,
+				B8B8B5FC2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				B8D3F45E2B8A4C1300043027 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
