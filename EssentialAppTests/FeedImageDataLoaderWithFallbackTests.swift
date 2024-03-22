@@ -9,8 +9,10 @@ import XCTest
 import EssentialFeedMacos
 class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
     private let primaryLoader: FeedImageDataLoader
+    private let fallbackLoader: FeedImageDataLoader
     init(primary: FeedImageDataLoader, fallback: FeedImageDataLoader) {
         self.primaryLoader = primary
+        self.fallbackLoader = fallback
     }
     
     private class TaskWrapper: FeedImageDataLoaderTask {
@@ -23,7 +25,16 @@ class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
     
     func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
         var task = TaskWrapper()
-        task.wrapped = primaryLoader.loadImageData(from: url, completion: completion)
+        task.wrapped = primaryLoader.loadImageData(from: url) { result in
+            switch result {
+            case let .success(imageData):
+                completion(.success(imageData))
+            case .failure:
+                task.wrapped = self.fallbackLoader.loadImageData(from: url) { result in
+                    completion(result)
+                }
+            }
+        }
         
         return task
     }
@@ -43,6 +54,24 @@ class FeedImageDataLoaderWithFallbackTests: XCTestCase {
             switch result {
             case let .success(receivedImage):
                 XCTAssertEqual(receivedImage, primaryImage)
+            case .failure:
+                XCTFail("Expected successful result, got \(result) instead!")
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
+    }
+    
+    func test_load_deliversFallbackDataOnPrimaryLoaderFailure() {
+        let fallbackImage = anyImageData(color: .blue)
+        let sut = makeSUT(primary: .failure(anyNSError()), fallback: .success(fallbackImage))
+        
+        let exp = expectation(description: "Wait for load completion")
+        let url = URL(string: "http://any-url.com")!
+        _ = sut.loadImageData(from: url) { result in
+            switch result {
+            case let .success(receivedImage):
+                XCTAssertEqual(receivedImage, fallbackImage)
             case .failure:
                 XCTFail("Expected successful result, got \(result) instead!")
             }

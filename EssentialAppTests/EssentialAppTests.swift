@@ -61,12 +61,6 @@ final class FeedLoaderWithFallbackCompositeTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
-    
-    
-    private func anyNSError() -> NSError {
-        return NSError(domain: "any error", code: 0)
-    }
-    
     private func uniqueFeed() -> [FeedImage] {
         return [FeedImage(id: UUID(), description: nil, location: nil, imageURL: URL(string: "http://any-url.com")!)]
     }
@@ -89,4 +83,8 @@ extension XCTestCase {
             XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak", file: file, line: line)
         }
     }
+}
+
+func anyNSError() -> NSError {
+    return NSError(domain: "any error", code: 0)
 }
