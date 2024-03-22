@@ -48,53 +48,20 @@ class FeedImageDataLoaderWithFallbackTests: XCTestCase {
         let fallbackImage = anyImageData(color: .blue)
         let sut = makeSUT(primary: .success(primaryImage), fallback: .success(fallbackImage))
         
-        let exp = expectation(description: "Wait for load completion")
-        let url = URL(string: "http://any-url.com")!
-        _ = sut.loadImageData(from: url) { result in
-            switch result {
-            case let .success(receivedImage):
-                XCTAssertEqual(receivedImage, primaryImage)
-            case .failure:
-                XCTFail("Expected successful result, got \(result) instead!")
-            }
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1.0)
+        expect(sut, toCompleteWith: .success(primaryImage))
     }
     
     func test_load_deliversFallbackDataOnPrimaryLoaderFailure() {
         let fallbackImage = anyImageData(color: .blue)
         let sut = makeSUT(primary: .failure(anyNSError()), fallback: .success(fallbackImage))
         
-        let exp = expectation(description: "Wait for load completion")
-        let url = URL(string: "http://any-url.com")!
-        _ = sut.loadImageData(from: url) { result in
-            switch result {
-            case let .success(receivedImage):
-                XCTAssertEqual(receivedImage, fallbackImage)
-            case .failure:
-                XCTFail("Expected successful result, got \(result) instead!")
-            }
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1.0)
+        expect(sut, toCompleteWith: .success(fallbackImage))
     }
     
     func test_load_deliversErrorOnBothPrimaryAndFallbackLoadersFailure() {
         let sut = makeSUT(primary: .failure(anyNSError()), fallback: .failure(anyNSError()))
         
-        let exp = expectation(description: "Wait for load completion")
-        let url = URL(string: "http://any-url.com")!
-        _ = sut.loadImageData(from: url) { result in
-            switch result {
-            case let .success(receivedImage):
-                XCTAssertEqual(receivedImage, nil)
-            case .failure:
-                break
-            }
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1.0)
+        expect(sut, toCompleteWith: .failure(anyNSError()))
     }
     
     
@@ -106,6 +73,23 @@ class FeedImageDataLoaderWithFallbackTests: XCTestCase {
         let sut = FeedImageDataLoaderWithFallbackComposite(primary: primaryLoader, fallback: fallbackLoader)
         trackForMemoryLeaks(sut)
         return sut
+    }
+    
+    private func expect(_ sut: FeedImageDataLoader, toCompleteWith expectedResult: FeedImageDataLoader.Result, file: StaticString = #file, line: UInt = #line) {
+        let exp = expectation(description: "Wait for load completion")
+        let url = URL(string: "http://any-url.com")!
+        _ = sut.loadImageData(from: url) { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedImage), .success(expectedImage)):
+                XCTAssertEqual(receivedImage, expectedImage)
+            case (.failure, .failure):
+                break
+            default:
+                XCTFail("Expected successful result, got \(receivedResult) instead!")
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
     }
     
     func anyImageData(color: UIColor) -> Data {
