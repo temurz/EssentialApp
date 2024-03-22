@@ -80,6 +80,23 @@ class FeedImageDataLoaderWithFallbackTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
+    func test_load_deliversErrorOnBothPrimaryAndFallbackLoadersFailure() {
+        let sut = makeSUT(primary: .failure(anyNSError()), fallback: .failure(anyNSError()))
+        
+        let exp = expectation(description: "Wait for load completion")
+        let url = URL(string: "http://any-url.com")!
+        _ = sut.loadImageData(from: url) { result in
+            switch result {
+            case let .success(receivedImage):
+                XCTAssertEqual(receivedImage, nil)
+            case .failure:
+                break
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
+    }
+    
     
     //MARK: - Helpers
     
