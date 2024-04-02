@@ -7,15 +7,24 @@
 
 import XCTest
 import EssentialFeedMacos
+protocol FeedCache {
+    typealias Result = Swift.Result<Void,Error>
+    func save(_ feed: [FeedImage], completion: @escaping (Result) -> ())
+}
+
 class FeedLoaderCacheDecorator: FeedLoader {
     var decoratee: FeedLoader
-    
-    init(decoratee: FeedLoader) {
+    let cache: FeedCache
+    init(decoratee: FeedLoader, cache: FeedCache) {
         self.decoratee = decoratee
+        self.cache = cache
     }
     
     func load(completion: @escaping (FeedLoader.Result) -> Void) {
-        decoratee.load(completion: completion)
+        decoratee.load { [weak self] result in
+            self?.cache.save((try? result.get()) ?? []) { _ in }
+            completion(result)
+        }
     }
 }
 
@@ -34,11 +43,34 @@ class FeedLoaderCacheDecoratorTests: XCTestCase, FeedLoaderTestCase {
         expect(sut, toCompleteWith: .failure(anyNSError()))
     }
     
-    func makeSUT(loaderResult: FeedLoader.Result, file: StaticString = #file, line: UInt = #line) -> FeedLoader {
+    func test_load_cachesFeedOnLoaderSuccess() {
+        let cache = CacheSpy()
+        let feed = uniqueFeed()
+        let sut = makeSUT(loaderResult: .success(feed), cache: cache)
+        
+        sut.load { _ in }
+        
+        XCTAssertEqual(cache.messages, [.save(feed)])
+    }
+    
+    private func makeSUT(loaderResult: FeedLoader.Result, cache: CacheSpy = .init(), file: StaticString = #file, line: UInt = #line) -> FeedLoader {
         let loader = FeedLoaderStub(result: loaderResult)
-        let sut = FeedLoaderCacheDecorator(decoratee: loader)
+        let sut = FeedLoaderCacheDecorator(decoratee: loader, cache: cache)
         trackForMemoryLeaks(loader)
         trackForMemoryLeaks(sut)
         return sut
+    }
+    
+    private class CacheSpy: FeedCache {
+        private(set) var messages = [Message]()
+        
+        enum Message: Equatable {
+            case save(_ feed: [FeedImage])
+        }
+        
+        func save(_ feed: [EssentialFeedMacos.FeedImage], completion: @escaping (FeedCache.Result) -> ()) {
+            messages.append(.save(feed))
+            completion(.success(()))
+        }
     }
 }
