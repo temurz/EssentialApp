@@ -27,6 +27,7 @@
 		B8FE37E12BBC48B700C34D74 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37E02BBC48B700C34D74 /* FeedLoaderCacheDecorator.swift */; };
 		B8FE37E92BBC63F000C34D74 /* EssentialAppUIAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37E82BBC63F000C34D74 /* EssentialAppUIAcceptanceTests.swift */; };
 		B8FE37EB2BBC63F000C34D74 /* EssentialAppUIAcceptanceTestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37EA2BBC63F000C34D74 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */; };
+		B8FE37F32BBE0CA800C34D74 /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37F22BBE0CA800C34D74 /* DebuggingSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		B8FE37E82BBC63F000C34D74 /* EssentialAppUIAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTests.swift; sourceTree = "<group>"; };
 		B8FE37EA2BBC63F000C34D74 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTestsLaunchTests.swift; sourceTree = "<group>"; };
 		B8FE37F12BBC644D00C34D74 /* EssentialApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialApp.xctestplan; sourceTree = "<group>"; };
+		B8FE37F22BBE0CA800C34D74 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				B8D3F45B2B8A4C1300043027 /* AppDelegate.swift */,
 				B8D3F45D2B8A4C1300043027 /* SceneDelegate.swift */,
+				B8FE37F22BBE0CA800C34D74 /* DebuggingSceneDelegate.swift */,
 				B8D3F45F2B8A4C1300043027 /* ViewController.swift */,
 				B8D3F4612B8A4C1300043027 /* Main.storyboard */,
 				B8D3F4642B8A4C1500043027 /* Assets.xcassets */,
@@ -434,6 +437,7 @@
 				B8B8B5FC2BADE391006CB088 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				B8FE37E12BBC48B700C34D74 /* FeedLoaderCacheDecorator.swift in Sources */,
 				B8D3F45E2B8A4C1300043027 /* SceneDelegate.swift in Sources */,
+				B8FE37F32BBE0CA800C34D74 /* DebuggingSceneDelegate.swift in Sources */,
 				B8A652872BAE09620086A068 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
