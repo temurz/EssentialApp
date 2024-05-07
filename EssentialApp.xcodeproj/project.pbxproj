@@ -44,7 +44,6 @@
 		B8FE37DB2BBC3E4F00C34D74 /* XCTestCase+TrackingMemoryLeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37DA2BBC3E4F00C34D74 /* XCTestCase+TrackingMemoryLeak.swift */; };
 		B8FE37DD2BBC3EF400C34D74 /* XCTestCase+FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37DC2BBC3EF400C34D74 /* XCTestCase+FeedLoader.swift */; };
 		B8FE37E12BBC48B700C34D74 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37E02BBC48B700C34D74 /* FeedLoaderCacheDecorator.swift */; };
-		B8FE37F32BBE0CA800C34D74 /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE37F22BBE0CA800C34D74 /* DebuggingSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,7 +139,6 @@
 		B8FE37DC2BBC3EF400C34D74 /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
 		B8FE37E02BBC48B700C34D74 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		B8FE37F12BBC644D00C34D74 /* EssentialApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialApp.xctestplan; sourceTree = "<group>"; };
-		B8FE37F22BBE0CA800C34D74 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +207,6 @@
 				B8E3C5912BC435FB00612E7C /* FeedViewAdapter.swift */,
 				B8D3F45B2B8A4C1300043027 /* AppDelegate.swift */,
 				B8D3F45D2B8A4C1300043027 /* SceneDelegate.swift */,
-				B8FE37F22BBE0CA800C34D74 /* DebuggingSceneDelegate.swift */,
 				B8D3F45F2B8A4C1300043027 /* ViewController.swift */,
 				B8D3F4612B8A4C1300043027 /* Main.storyboard */,
 				B8D3F4642B8A4C1500043027 /* Assets.xcassets */,
@@ -447,7 +444,6 @@
 				B8FE37E12BBC48B700C34D74 /* FeedLoaderCacheDecorator.swift in Sources */,
 				B8E3C5972BC435FB00612E7C /* FeedViewAdapter.swift in Sources */,
 				B8D3F45E2B8A4C1300043027 /* SceneDelegate.swift in Sources */,
-				B8FE37F32BBE0CA800C34D74 /* DebuggingSceneDelegate.swift in Sources */,
 				B8E3C5982BC435FB00612E7C /* FeedUIComposer.swift in Sources */,
 				B8E3C5952BC435FB00612E7C /* MainQueueDispatchDecorator.swift in Sources */,
 				B8E3C5932BC435FB00612E7C /* FeedLoaderPresentationAdapter.swift in Sources */,
