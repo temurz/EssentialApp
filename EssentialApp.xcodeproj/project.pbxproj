@@ -19,6 +19,12 @@
 		B8D3F4652B8A4C1500043027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8D3F4642B8A4C1500043027 /* Assets.xcassets */; };
 		B8D3F4682B8A4C1500043027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D3F4662B8A4C1500043027 /* LaunchScreen.storyboard */; };
 		B8DC4E692BEA64CB006A9A9D /* FeedImageDataLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DC4E682BEA64CB006A9A9D /* FeedImageDataLoaderCacheDecorator.swift */; };
+		B8DC4FB02BF2A1AA006A9A9D /* EssentialFeedMacos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FAF2BF2A1AA006A9A9D /* EssentialFeedMacos.framework */; };
+		B8DC4FB12BF2A1AA006A9A9D /* EssentialFeedMacos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FAF2BF2A1AA006A9A9D /* EssentialFeedMacos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B8DC4FB42BF2A1AF006A9A9D /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB32BF2A1AF006A9A9D /* EssentialFeediOS.framework */; };
+		B8DC4FB52BF2A1AF006A9A9D /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB32BF2A1AF006A9A9D /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B8DC4FB72BF2A1B3006A9A9D /* EssentialFeedAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB62BF2A1B3006A9A9D /* EssentialFeedAPI.framework */; };
+		B8DC4FB82BF2A1B3006A9A9D /* EssentialFeedAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB62BF2A1B3006A9A9D /* EssentialFeedAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8E3C5932BC435FB00612E7C /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C5872BC435FA00612E7C /* FeedLoaderPresentationAdapter.swift */; };
 		B8E3C5942BC435FB00612E7C /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C58E2BC435FB00612E7C /* WeakRefVirtualProxy.swift */; };
 		B8E3C5952BC435FB00612E7C /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C58F2BC435FB00612E7C /* MainQueueDispatchDecorator.swift */; };
@@ -54,6 +60,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B8DC4FB22BF2A1AA006A9A9D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B8DC4FB82BF2A1B3006A9A9D /* EssentialFeedAPI.framework in Embed Frameworks */,
+				B8DC4FB12BF2A1AA006A9A9D /* EssentialFeedMacos.framework in Embed Frameworks */,
+				B8DC4FB52BF2A1AF006A9A9D /* EssentialFeediOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B8A6527E2BADFD760086A068 /* FeedImageDataLoaderWithFallbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackTests.swift; sourceTree = "<group>"; };
 		B8A652862BAE09620086A068 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
@@ -70,6 +92,9 @@
 		B8D3F4672B8A4C1500043027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8D3F4692B8A4C1500043027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8DC4E682BEA64CB006A9A9D /* FeedImageDataLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecorator.swift; sourceTree = "<group>"; };
+		B8DC4FAF2BF2A1AA006A9A9D /* EssentialFeedMacos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeedMacos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DC4FB32BF2A1AF006A9A9D /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DC4FB62BF2A1B3006A9A9D /* EssentialFeedAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeedAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E3C5872BC435FA00612E7C /* FeedLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedLoaderPresentationAdapter.swift; path = "../../EssentialFeedMacos/EssentialFeediOS/Feed UI/Composers/FeedLoaderPresentationAdapter.swift"; sourceTree = "<group>"; };
 		B8E3C58E2BC435FB00612E7C /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakRefVirtualProxy.swift; path = "../../EssentialFeedMacos/EssentialFeediOS/Feed UI/Composers/WeakRefVirtualProxy.swift"; sourceTree = "<group>"; };
 		B8E3C58F2BC435FB00612E7C /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainQueueDispatchDecorator.swift; path = "../../EssentialFeedMacos/EssentialFeediOS/Feed UI/Composers/MainQueueDispatchDecorator.swift"; sourceTree = "<group>"; };
@@ -108,6 +133,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8DC4FB72BF2A1B3006A9A9D /* EssentialFeedAPI.framework in Frameworks */,
+				B8DC4FB02BF2A1AA006A9A9D /* EssentialFeedMacos.framework in Frameworks */,
+				B8DC4FB42BF2A1AF006A9A9D /* EssentialFeediOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +203,9 @@
 		B8D3F4762B8A4FC400043027 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8DC4FB62BF2A1B3006A9A9D /* EssentialFeedAPI.framework */,
+				B8DC4FB32BF2A1AF006A9A9D /* EssentialFeediOS.framework */,
+				B8DC4FAF2BF2A1AA006A9A9D /* EssentialFeedMacos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,6 +258,7 @@
 				B8D3F4542B8A4C1300043027 /* Sources */,
 				B8D3F4552B8A4C1300043027 /* Frameworks */,
 				B8D3F4562B8A4C1300043027 /* Resources */,
+				B8DC4FB22BF2A1AA006A9A9D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -534,7 +566,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B9QUW9Z84N;
+				DEVELOPMENT_TEAM = HW395M775M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EssentialApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -561,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B9QUW9Z84N;
+				DEVELOPMENT_TEAM = HW395M775M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EssentialApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
