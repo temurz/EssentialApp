@@ -19,11 +19,8 @@
 		B8D3F4682B8A4C1500043027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D3F4662B8A4C1500043027 /* LaunchScreen.storyboard */; };
 		B8DC4E692BEA64CB006A9A9D /* FeedImageDataLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DC4E682BEA64CB006A9A9D /* FeedImageDataLoaderCacheDecorator.swift */; };
 		B8DC4FB02BF2A1AA006A9A9D /* EssentialFeedMacos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FAF2BF2A1AA006A9A9D /* EssentialFeedMacos.framework */; };
-		B8DC4FB12BF2A1AA006A9A9D /* EssentialFeedMacos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FAF2BF2A1AA006A9A9D /* EssentialFeedMacos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8DC4FB42BF2A1AF006A9A9D /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB32BF2A1AF006A9A9D /* EssentialFeediOS.framework */; };
-		B8DC4FB52BF2A1AF006A9A9D /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB32BF2A1AF006A9A9D /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8DC4FB72BF2A1B3006A9A9D /* EssentialFeedAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB62BF2A1B3006A9A9D /* EssentialFeedAPI.framework */; };
-		B8DC4FB82BF2A1B3006A9A9D /* EssentialFeedAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC4FB62BF2A1B3006A9A9D /* EssentialFeedAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8E3C5932BC435FB00612E7C /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C5872BC435FA00612E7C /* FeedLoaderPresentationAdapter.swift */; };
 		B8E3C5942BC435FB00612E7C /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C58E2BC435FB00612E7C /* WeakRefVirtualProxy.swift */; };
 		B8E3C5952BC435FB00612E7C /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C58F2BC435FB00612E7C /* MainQueueDispatchDecorator.swift */; };
@@ -58,22 +55,6 @@
 			remoteInfo = EssentialApp;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B8DC4FB22BF2A1AA006A9A9D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B8DC4FB82BF2A1B3006A9A9D /* EssentialFeedAPI.framework in Embed Frameworks */,
-				B8DC4FB12BF2A1AA006A9A9D /* EssentialFeedMacos.framework in Embed Frameworks */,
-				B8DC4FB52BF2A1AF006A9A9D /* EssentialFeediOS.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B8A6527E2BADFD760086A068 /* FeedImageDataLoaderWithFallbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackTests.swift; sourceTree = "<group>"; };
@@ -255,7 +236,6 @@
 				B8D3F4542B8A4C1300043027 /* Sources */,
 				B8D3F4552B8A4C1300043027 /* Frameworks */,
 				B8D3F4562B8A4C1300043027 /* Resources */,
-				B8DC4FB22BF2A1AA006A9A9D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -559,13 +539,13 @@
 				INFOPLIST_FILE = EssentialApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TexnoPos.EssentialApp;
+				PRODUCT_BUNDLE_IDENTIFIER = TexnoPos.EssentialAppCaseStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -585,13 +565,13 @@
 				INFOPLIST_FILE = EssentialApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TexnoPos.EssentialApp;
+				PRODUCT_BUNDLE_IDENTIFIER = TexnoPos.EssentialAppCaseStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
