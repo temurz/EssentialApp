@@ -8,6 +8,7 @@
 import XCTest
 import EssentialFeedMacos
 import EssentialFeediOS
+import EssentialFeedAPI
 @testable import EssentialApp
 class FeedAcceptanceTests: XCTestCase {
     func test_onLaunch_displayRemoteFeedWhenCustomerHasConnectivity() {
