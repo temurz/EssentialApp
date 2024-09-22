@@ -45,11 +45,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func configureWindow() {
 //        let url = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
         
-        let remoteClient = httpClient
+//        let remoteClient = httpClient
 //        let remoteFeedLoader = RemoteFeedLoader(url: url, client: remoteClient)
-        let remoteImageLoader = RemoteFeedImageDataLoader(client: remoteClient)
+//        let remoteImageLoader = RemoteFeedImageDataLoader(client: remoteClient)
         
-        let localImageLoader = LocalFeedImageDataLoader(store: store)
+//        let localImageLoader = LocalFeedImageDataLoader(store: store)
         
         let viewController = UINavigationController(rootViewController:  FeedUIComposer.feedComposeWith(
             feedLoader:
@@ -66,7 +66,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         localFeedLoader.validateCache { _ in }
     }
     
-    func makeRemoteFeedLoaderWithLocalFallback() -> FeedLoader.Publisher {
+    func makeRemoteFeedLoaderWithLocalFallback() -> AnyPublisher<[FeedImage], Error> {
         let remoteURL = URL(string:"https://static1.squarespace.com/static/5891c5b8d1758ec68ef5dbc2/t/5db4155a4fbade21d17ecd28/1572083034355/essential _app_feed.json")!
 //        let remoteURL = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
         let remoteFeedLoader = httpClient.getPublisher(url: remoteURL)
