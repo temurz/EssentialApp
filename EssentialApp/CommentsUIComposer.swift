@@ -43,6 +43,6 @@ internal final class CommentsViewAdapter: ResourceView {
     }
     
     func display(_ viewModel: ImageCommentsViewModel) {
-        controller?.display(viewModel.comments.map{ viewModel in CellController(id: viewModel, ImageCommentsCellController(model: viewModel)) })
+        controller?.display(viewModel.comments.map{ viewModel in CellController(id: viewModel, ImageCommentCellController(model: viewModel)) })
     }
 }
