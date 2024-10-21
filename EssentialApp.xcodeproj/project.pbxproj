@@ -30,7 +30,6 @@
 		B8E3C5962BC435FB00612E7C /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C5902BC435FB00612E7C /* FeedImageDataLoaderPresentationAdapter.swift */; };
 		B8E3C5972BC435FB00612E7C /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C5912BC435FB00612E7C /* FeedViewAdapter.swift */; };
 		B8E3C5982BC435FB00612E7C /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C5922BC435FB00612E7C /* FeedUIComposer.swift */; };
-		B8E3C5A22BC4365100612E7C /* FeedUIIntegrationTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C5992BC4365100612E7C /* FeedUIIntegrationTests+Localization.swift */; };
 		B8E3C5A32BC4365100612E7C /* FeedUIIntegration+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C59A2BC4365100612E7C /* FeedUIIntegration+LoaderSpy.swift */; };
 		B8E3C5A42BC4365100612E7C /* UIControl+TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C59B2BC4365100612E7C /* UIControl+TestHelper.swift */; };
 		B8E3C5A52BC4365100612E7C /* UIButton+TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3C59C2BC4365100612E7C /* UIButton+TestHelper.swift */; };
@@ -101,7 +100,6 @@
 		B8E3C5902BC435FB00612E7C /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedImageDataLoaderPresentationAdapter.swift; path = "../../EssentialFeedMacos/EssentialFeediOS/Feed UI/Composers/FeedImageDataLoaderPresentationAdapter.swift"; sourceTree = "<group>"; };
 		B8E3C5912BC435FB00612E7C /* FeedViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewAdapter.swift; path = "../../EssentialFeedMacos/EssentialFeediOS/Feed UI/Composers/FeedViewAdapter.swift"; sourceTree = "<group>"; };
 		B8E3C5922BC435FB00612E7C /* FeedUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedUIComposer.swift; path = "../../EssentialFeedMacos/EssentialFeediOS/Feed UI/Composers/FeedUIComposer.swift"; sourceTree = "<group>"; };
-		B8E3C5992BC4365100612E7C /* FeedUIIntegrationTests+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FeedUIIntegrationTests+Localization.swift"; path = "../../../EssentialFeedMacos/EssentialFeediOSTests/Helpers/FeedUIIntegrationTests+Localization.swift"; sourceTree = "<group>"; };
 		B8E3C59A2BC4365100612E7C /* FeedUIIntegration+LoaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FeedUIIntegration+LoaderSpy.swift"; path = "../../../EssentialFeedMacos/EssentialFeediOSTests/Helpers/FeedUIIntegration+LoaderSpy.swift"; sourceTree = "<group>"; };
 		B8E3C59B2BC4365100612E7C /* UIControl+TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+TestHelper.swift"; path = "../../../EssentialFeedMacos/EssentialFeediOSTests/Helpers/UIControl+TestHelper.swift"; sourceTree = "<group>"; };
 		B8E3C59C2BC4365100612E7C /* UIButton+TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+TestHelper.swift"; path = "../../../EssentialFeedMacos/EssentialFeediOSTests/Helpers/UIButton+TestHelper.swift"; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 				B8E3C59C2BC4365100612E7C /* UIButton+TestHelper.swift */,
 				B8E3C59A2BC4365100612E7C /* FeedUIIntegration+LoaderSpy.swift */,
 				B8E3C5A02BC4365100612E7C /* FeedUIIntegrationTests+Assertions.swift */,
-				B8E3C5992BC4365100612E7C /* FeedUIIntegrationTests+Localization.swift */,
 				B8FE37D62BBC3D8300C34D74 /* FeedLoaderStub.swift */,
 				B8FE37D82BBC3E1400C34D74 /* SharedTestHelpers.swift */,
 				B8FE37DA2BBC3E4F00C34D74 /* XCTestCase+TrackingMemoryLeak.swift */,
@@ -357,7 +354,6 @@
 				B8FE37D92BBC3E1400C34D74 /* SharedTestHelpers.swift in Sources */,
 				B8B8B5EF2BADD512006CB088 /* EssentialAppTests.swift in Sources */,
 				B8E3C5A62BC4365100612E7C /* RefreshControl+TestHelper.swift in Sources */,
-				B8E3C5A22BC4365100612E7C /* FeedUIIntegrationTests+Localization.swift in Sources */,
 				B8FE37CE2BBC3B1500C34D74 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				B8FE37DB2BBC3E4F00C34D74 /* XCTestCase+TrackingMemoryLeak.swift in Sources */,
 				B8C1EACD2BC4279200DF7D8B /* SceneDelegateTests.swift in Sources */,

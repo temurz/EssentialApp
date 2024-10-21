@@ -13,3 +13,19 @@ func anyNSError() -> NSError {
 func uniqueFeed() -> [FeedImage] {
     return [FeedImage(id: UUID(), description: nil, location: nil, imageURL: URL(string: "http://any-url.com")!)]
 }
+
+private class DummyView: ResourceView {
+    func display(_ viewModel: Any) {}
+}
+
+var loadError: String {
+    LoadResourcePresenter<Any, DummyView>.loadError
+}
+
+var feedTitle: String {
+    FeedPresenter.title
+}
+
+var commentsTitle: String {
+    ImageCommentsPresenter.title
+}
